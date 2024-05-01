@@ -5,8 +5,7 @@
 ![Whisper server running](image.png)
 
 ## Screenshot of Local Host
-![alt text](image-1.png)
-I was unable to get Streamlit to run (described below), but I was able to open the server on my local host.
+![alt text](image-10.png)
 
 ---
 
@@ -55,5 +54,22 @@ I initialised a new podman machine, and now had Podman 5.0.2
 ![alt text](image-8.png)
 ![alt text](image-9.png)
 
-### Finishing
-I did not end up resolving the issue in time for the deadline. I resolved my issues with podman and mdoel deployment, and recorded an audio for the presentation, but could not get the streamlit UI to function to be able to test the model properly.
+---
+# Update: Fixed
+After presenting in class, I worked with Sally to resolve the issues I was facing with streamlit.
+
+1. Using the sudo command this time, I tried once more to move the streamlit file to its proper place in usr/bin. I was once again given a "Operation not permitted" error.
+![alt text](image-12.png)
+2. I identified the path where streamlit was and, with Sally's help, aliased this path. 
+3. I used vim to edit ~/.zshrc, and source zshrc to ensure this connection would remain at least semi-permanently.
+![alt text](image-11.png)
+4. Once I re-ran the whisper host service, and restarted the podman machine, the Streamlit UI launched in my local host.
+
+### Site Up
+![alt text](image-13.png)
+![alt text](image-14.png)
+(I had a connection error initially, but resolved this, once I realised I had not re-launced the whisper service)
+
+### Uploading Audio
+I tested the service with the .wav files included, and the translation processed!
+![alt text](image-15.png)
