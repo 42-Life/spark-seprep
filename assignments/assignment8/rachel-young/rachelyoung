@@ -1,0 +1,14 @@
+# Assignment 8
+## Name: Rachel Young 
+
+1. Add a terminal screenshot of the server hosted on your machine. My name is highlighted in yellow
+![server](server.jpg)
+
+2. Add a streamlit UI screenshot 
+![server](UI.png)
+
+3. Challenges and notes
+- I had to download several new packages along the way. I used pip install streamlit, ffmpeg, etc.
+- I also struggled a lot in general with remembering to be in the right directory so I would advise doing ls 
+- I was getting an error 403 error when I was in streamlit and Piazza post question @ 60 was really helpful and I did the pip install streamlit==1.24.0 and that helped fix the issue
+- for the podman run command, I needed to remove the "z," from the -v line
